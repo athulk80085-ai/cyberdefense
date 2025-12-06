@@ -135,7 +135,7 @@ function NodeSphere({ node, isSelected, onHover }: {
       transparent: node.status === 'isolated',
       opacity: node.status === 'isolated' ? 0.5 : 1
     }
-  }, [node.orbit, node.status])
+  }, [node.orbit, node.status, orbitColor, statusColor])
 
   return (
     <mesh
@@ -194,7 +194,7 @@ function TrustIndicator({ node }: { node: SecurityNodeType }) {
         <meshBasicMaterial color={getTrustColor(trustLevel)} />
       </mesh>
 
-      {/* Trust percentage text */}
+      {/* Trust percentage text - FIXED: Wrapped template literal in curly braces */}
       <Text
         position={[0.3, 0, 0]}
         fontSize={0.3}
@@ -202,7 +202,7 @@ function TrustIndicator({ node }: { node: SecurityNodeType }) {
         anchorX="left"
         anchorY="middle"
       >
-        `${Math.round(trustLevel * 100)}%`
+        {`${Math.round(trustLevel * 100)}%`}
       </Text>
     </group>
   )
