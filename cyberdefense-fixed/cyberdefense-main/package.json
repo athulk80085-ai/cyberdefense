@@ -12,8 +12,8 @@
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
     "next": "16.0.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "three": "^0.159.0",
     "zustand": "^4.5.7"
   },
